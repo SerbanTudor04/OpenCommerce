@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: OpenCommerce_development
+  username: OpenCommerce
+  password: OpenCommerce
+  host: "localhost"
+  port: 5432
+  schema_search_path: public
+  min_messages: notice
+
+test:
+  <<: *default
+  database: OpenCommerce_test
+
+production:
+  <<: *default
+  database: OpenCommerce_production
+  username: OpenCommerce
+  password: <%= ENV["OPENCOMMERCE_DATABASE_PASSWORD"] %>

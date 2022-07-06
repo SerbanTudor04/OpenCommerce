@@ -1,0 +1,2 @@
+module AdminAuthenticationHelper
+end
