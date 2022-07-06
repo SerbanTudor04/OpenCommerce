@@ -1,8 +1,5 @@
 # OpenCommerce Change Log
 
-[]: # Language: markdown
-[]: # Path: CONTRIBUTING.md
-
 ## 0.0.1
 Updates:
 Fixes:
