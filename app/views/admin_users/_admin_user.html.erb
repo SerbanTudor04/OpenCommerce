@@ -1,0 +1,22 @@
+<div id="<%= dom_id admin_user %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Username:</strong>
+    <%= admin_user.username %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Hashed password:</strong>
+    <%= admin_user.hashed_password %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= admin_user.email %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this admin user", admin_user, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this admin user', edit_admin_user_path(admin_user), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

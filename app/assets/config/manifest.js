@@ -1,3 +1,8 @@
-//= link_tree ../images
-//= link_directory ../stylesheets .css
+
+
+
 //= link_tree ../builds
+//= link_tree ../images
+//= link_tree ../stylesheets
+
+//= link ../../javascript/packs/application.js

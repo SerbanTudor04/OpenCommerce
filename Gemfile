@@ -77,3 +77,6 @@ end
 
 gem "tailwindcss-rails", "~> 2.0"
 gem 'erb_lint', require: false
+
+
+gem "webpacker", "~> 5.4"
