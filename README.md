@@ -1,31 +1,24 @@
-# OpenCommerce
-A free open-source ECommerce, which is made for starting bussines situated at the beginnin
+# README
 
-[Changelog](CHANGELOG.md)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
 
+* Ruby version
 
-## Features
-coming soon
+* System dependencies
 
-## Installation
-coming soon
+* Configuration
 
-## Usage
-coming soon
+* Database creation
 
-## Contributing
-We are open to contributions.
+* Database initialization
 
-## License
-[Apache 2.0](./LICENSE)
+* How to run the test suite
 
-## Tests
-coming soon
+* Services (job queues, cache servers, search engines, etc.)
 
-## Debugging
-coming soon
+* Deployment instructions
 
-## Development 
-coming soon
-
+* ...
