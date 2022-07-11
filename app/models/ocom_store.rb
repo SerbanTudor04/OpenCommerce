@@ -1,0 +1,2 @@
+class OcomStore < ApplicationRecord
+end

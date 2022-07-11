@@ -173,6 +173,7 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    securerandom (0.1.1)
     selenium-webdriver (4.3.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -229,6 +230,7 @@ DEPENDENCIES
   postgresql
   puma (~> 5.0)
   rails (~> 7.0.3)
+  securerandom
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

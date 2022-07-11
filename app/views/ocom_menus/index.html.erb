@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ocom menus</h1>
+
+<div id="ocom_menus">
+  <% @ocom_menus.each do |ocom_menu| %>
+    <%= render ocom_menu %>
+    <p>
+      <%= link_to "Show this ocom menu", ocom_menu %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ocom menu", new_ocom_menu_path %>

@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get '*other', to: 'static#index'
+  resources :ocom_menus
+  resources :ocom_stores
+ 
 end

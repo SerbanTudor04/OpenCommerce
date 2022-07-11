@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ocom_store %>
+
+<div>
+  <%= link_to "Edit this ocom store", edit_ocom_store_path(@ocom_store) %> |
+  <%= link_to "Back to ocom stores", ocom_stores_path %>
+
+  <%= button_to "Destroy this ocom store", @ocom_store, method: :delete %>
+</div>

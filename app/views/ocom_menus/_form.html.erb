@@ -1,0 +1,32 @@
+<%= form_with(model: ocom_menu) do |form| %>
+  <% if ocom_menu.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ocom_menu.errors.count, "error") %> prohibited this ocom_menu from being saved:</h2>
+
+      <ul>
+        <% ocom_menu.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :parent_id, style: "display: block" %>
+    <%= form.text_field :parent_id %>
+  </div>
+
+  <div>
+    <%= form.label :redirect_to, style: "display: block" %>
+    <%= form.text_field :redirect_to %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

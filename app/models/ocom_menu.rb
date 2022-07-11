@@ -1,0 +1,2 @@
+class OcomMenu < ApplicationRecord
+end

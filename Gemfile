@@ -75,3 +75,5 @@ gem "postgresql"
 
 # Use foreman
 gem 'foreman'
+
+gem "securerandom"
