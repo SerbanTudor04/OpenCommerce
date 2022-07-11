@@ -1,0 +1,8 @@
+
+    <ion-item *ngFor="let button of navbar_menus" >
+        <ion-icon *ngIf="button.parent_id==0" slot="start" name="menu"></ion-icon>
+        <ion-label>{{button.name}}</ion-label>
+    </ion-item>
+    
+
+

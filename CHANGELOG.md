@@ -1,4 +1,10 @@
 # OpenCommerce Change Log
+
+## 0.2.1
+### Updates:
+- [x] Implement CORS support.
+- [x] Toolbar title getting from database
+### Fixes:
 ## 0.2.0
 ### Updates:
 - [x] Define public view page template 

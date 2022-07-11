@@ -77,3 +77,4 @@ gem "postgresql"
 gem 'foreman'
 
 gem "securerandom"
+gem "rack-cors"
