@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -6,23 +6,19 @@ import { environment } from 'src/environments/environment';
   templateUrl: './nav-bar-links-menu.component.html',
   styleUrls: ['./nav-bar-links-menu.component.scss']
 })
-export class NavBarLinksMenuComponent implements OnInit {
+export class NavBarLinksMenuComponent implements AfterViewInit {
 
-  navbar_menus:any[]=[];
-
+  @Input() navbar_menus:any[]=[];
   constructor() { }
 
-  ngOnInit(): void {
-    this.fetchNavbarData();
-  }
-  async fetchNavbarData() {
+  ngAfterViewInit(): void {
+    console.log(this.navbar_menus);
+      
 
-    // fetch navbar links
-    let result = await fetch(environment.api_base_url+'ocom_menus.json');
-    let data = await result.json();
-    this.navbar_menus=data;
-    
   }
+
+
+  
 
 
 }

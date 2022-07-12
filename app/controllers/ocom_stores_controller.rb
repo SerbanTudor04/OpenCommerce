@@ -10,54 +10,29 @@ class OcomStoresController < ApplicationController
   def show
   end
 
-  # GET /ocom_stores/new
-  # def new
-  #   @ocom_store = OcomStore.new
-  # end
+  # GET /ocom_stores/1/ocom_menus
+  def getChildMenusByStoreId
+    @ocom_menus = execute_statement("select parent.id as parent_id,child.id as id,	child.name as name,	child.redirect_to as href from ocom_menus child  join ocom_menus parent ON child.parent_id  = parent.id and parent.store_id=#{params[:id]} order by 1")
+    render json: @ocom_menus
+  end
 
-  # GET /ocom_stores/1/edit
-  # def edit
-  # end
-
-  # POST /ocom_stores or /ocom_stores.json
-  # def create
-  #   @ocom_store = OcomStore.new(ocom_store_params)
-
-  #   respond_to do |format|
-  #     if @ocom_store.save
-  #       format.html { redirect_to ocom_store_url(@ocom_store), notice: "Ocom store was successfully created." }
-  #       format.json { render :show, status: :created, location: @ocom_store }
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #       format.json { render json: @ocom_store.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # PATCH/PUT /ocom_stores/1 or /ocom_stores/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @ocom_store.update(ocom_store_params)
-  #       format.html { redirect_to ocom_store_url(@ocom_store), notice: "Ocom store was successfully updated." }
-  #       format.json { render :show, status: :ok, location: @ocom_store }
-  #     else
-  #       format.html { render :edit, status: :unprocessable_entity }
-  #       format.json { render json: @ocom_store.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # DELETE /ocom_stores/1 or /ocom_stores/1.json
-  # def destroy
-  #   @ocom_store.destroy
-
-  #   respond_to do |format|
-  #     format.html { redirect_to ocom_stores_url, notice: "Ocom store was successfully destroyed." }
-  #     format.json { head :no_content }
-  #   end
-  # end
+  def getParentsMenusByStoreId
+    @ocom_menus = execute_statement("select id, name , redirect_to as href from ocom_menus where store_id=#{params[:id]} and parent_id=0")
+    render json: @ocom_menus
+  end
 
   private
+
+  
+    def execute_statement(sql)
+      results = ActiveRecord::Base.connection.execute(sql)
+    
+      if results.present?
+        return results
+      else
+        return nil
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_ocom_store
       @ocom_store = OcomStore.find(params[:id])

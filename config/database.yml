@@ -8,7 +8,7 @@ development:
   database: OpenCommerce_development
   username: OpenCommerce
   password: OpenCommerce
-  host: "localhost"
+  host: "10.10.110.11"
   port: 5432
   schema_search_path: public
   min_messages: notice
