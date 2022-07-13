@@ -1,5 +1,14 @@
 # OpenCommerce Change Log
 
+## 0.2.2
+### Updates:
+- [x] Add 404 page
+- [x] Redesign page view template by removing ocom_menus table and adding ocom_products_categories table
+- [x] Add products table
+- [x] Add products images table
+- [x] Add support for dark theme on ionic variables.css
+### Fixes:
+
 ## 0.2.1
 ### Updates:
 - [x] Implement CORS support.
