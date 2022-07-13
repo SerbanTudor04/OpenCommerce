@@ -97,3 +97,38 @@ OcomMenu.create(
 
 
 
+OcomAdminUser.create(
+    :email => "example@gmail.com",
+    :password_digest => "pwd123",
+    :first_name => "John",
+    :last_name => "Doe",
+    :phone_number => "123-456-7890",
+)
+    
+
+OcomProduct.create(
+    :name => "Shirt",
+    :price => 10.00,
+    :description => "This is a shirt",
+    :image => "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    :store_id => 1,
+)
+
+OcomProduct.create(
+    :name => "Pants",
+    :price => 10.00,
+    :description => "This is a pants",
+    :image => "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    :store_id => 1,
+)
+
+OcomProduct.create(
+    :name => "Shoes",
+    :price => 10.00,
+    :description => "This is a shoes",
+    :image => "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    :store_id => 1,
+)
+
+
+

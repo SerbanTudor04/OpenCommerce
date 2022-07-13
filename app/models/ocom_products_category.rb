@@ -1,0 +1,2 @@
+class OcomProductsCategory < ApplicationRecord
+end

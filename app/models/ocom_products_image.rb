@@ -1,0 +1,2 @@
+class OcomProductsImage < ApplicationRecord
+end

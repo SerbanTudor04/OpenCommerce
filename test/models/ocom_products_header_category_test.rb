@@ -1,6 +1,6 @@
 require "test_helper"
 
-class OcomMenuTest < ActiveSupport::TestCase
+class OcomProductsHeaderCategoryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -10,16 +10,10 @@ class OcomStoresController < ApplicationController
   def show
   end
 
-  # GET /ocom_stores/1/ocom_menus
-  def getChildMenusByStoreId
-    @ocom_menus = execute_statement("select parent.id as parent_id,child.id as id,	child.name as name,	child.redirect_to as href from ocom_menus child  join ocom_menus parent ON child.parent_id  = parent.id and parent.store_id=#{params[:id]} order by 1")
-    render json: @ocom_menus
-  end
+  
 
-  def getParentsMenusByStoreId
-    @ocom_menus = execute_statement("select id, name , redirect_to as href from ocom_menus where store_id=#{params[:id]} and parent_id=0")
-    render json: @ocom_menus
-  end
+  def getDefautlStore
+    @ocom_store = OcomStore.find_by()
 
   private
 

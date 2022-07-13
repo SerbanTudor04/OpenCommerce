@@ -1,0 +1,2 @@
+class OcomProductsHeaderCategory < ApplicationRecord
+end

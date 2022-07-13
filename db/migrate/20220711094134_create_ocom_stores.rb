@@ -5,7 +5,7 @@ class CreateOcomStores < ActiveRecord::Migration[7.0]
       t.integer :content_menu_id
       t.string :description
       t.integer :owner_id
-
+      t.boolean :defautl, default: false
       t.timestamps
     end
   end

@@ -1,0 +1,2 @@
+class OcomProduct < ApplicationRecord
+end

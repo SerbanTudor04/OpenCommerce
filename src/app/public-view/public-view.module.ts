@@ -5,10 +5,10 @@ import { PublicViewRoutingModule } from './public-view-routing.module';
 import { PublicViewComponent } from './public-view.component';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './home/home.component';
-import { NavBarLinksMenuComponent } from './nav-bar-links-menu/nav-bar-links-menu.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
-  declarations: [PublicViewComponent, HomeComponent, NavBarLinksMenuComponent],
+  declarations: [PublicViewComponent, HomeComponent,Error404Component],
   imports: [CommonModule, PublicViewRoutingModule, IonicModule],
 })
 export class PublicViewModule {}
