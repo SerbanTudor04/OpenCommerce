@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   # get 'ocom_stores/:id/ocom_menus_childs', to: 'ocom_stores#getChildMenusByStoreId', as: :ocom_menus_childs_by_store_id
 
   # post 'ocom_admin_auth/login', to: 'ocom_admin_sessions#create', as: :ocom_admin_login
+
+  get 'stores/default', to: 'stores#getDefaultStore', as: :ocom_store_default
  
-  
+  get 'categorys/:store_id', to: 'categories#getCategoriesByStore', as: :ocom_categories_by_store_id
 
 
 end

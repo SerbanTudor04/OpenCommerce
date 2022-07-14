@@ -1,7 +1,32 @@
 
 <ion-toolbar color="light">
 
+  <!-- Only for desktop -->
+  <div *ngIf="colorModeSrv.deviceType() == 'desktop' " class="desktop__only">
 
+    <ion-buttons slot="start">
+      <ion-button id="show__categories">
+        <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+        <ion-label>Products</ion-label>
+      </ion-button>
+    </ion-buttons>
+  
+    <ion-popover   class="products__popover__home" trigger="show__categories" showBackdrop="false" side="bottom" alignment="start">
+      <ng-template class="products__popover__template">
+        <ion-list  lines="none" *ngIf="app_info.categorys.length>0">
+          <ion-item  button [href]="'/category/'+category.id" *ngFor="let category of app_info.categorys">
+            <ion-label>{{category.name}}</ion-label>
+          </ion-item>
+        </ion-list>
+
+      </ng-template>
+    </ion-popover>
+  
+  </div>
+
+
+
+  <ion-searchbar style="width: 300px;" animated autocomplete="on" placeholder="ex: Nike"  slot="end"></ion-searchbar>
   <ion-title   *ngIf="app_info.navbar_title.name" slot="end">
     <a href="/" class="navbar__link__title">{{    app_info.navbar_title.name  }}</a>
   </ion-title>
@@ -14,3 +39,5 @@
 </ion-toolbar>
 
 <ion-router-outlet id="main"></ion-router-outlet>
+
+

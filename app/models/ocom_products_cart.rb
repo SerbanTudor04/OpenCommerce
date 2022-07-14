@@ -1,0 +1,2 @@
+class OcomProductsCart < ApplicationRecord
+end

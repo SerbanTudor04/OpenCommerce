@@ -1,39 +1,39 @@
+import { ColorModeService } from './services/color-mode.service';
 import { environment } from './../../environments/environment';
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'app-public-view',
   templateUrl: './public-view.component.html',
-  styleUrls: ['./public-view.component.scss']
+  styleUrls: ['./public-view.component.scss'],
 })
 export class PublicViewComponent implements OnInit {
-  app_info:any={
-    navbar_title:{
-      name:'',
+  app_info: any = {
+    navbar_title: {
+      name: '',
     },
-    navbar_menus:[]
-  }
+    categorys: [],
+  };
 
-  constructor() { }
+  constructor(public colorModeSrv: ColorModeService) {}
 
   ngOnInit(): void {
-    this.fetchNavbarData();
+    this.fetchStore().then(() => this.fetchProductsCategory());
   }
 
-  async fetchNavbarData() {
+  async fetchStore() {
     // fetch navbar data
-    // let result = await fetch(environment.api_base_url+'ocom_stores/1.json');
-    // let data = await result.json();
-    
-    
-    // this.app_info.navbar_title=data;
+    let result = await fetch(environment.api_base_url + 'stores/default');
+    let data = await result.json();
 
-
-
-     
+    this.app_info.navbar_title = data;
   }
 
-  
-
+  async fetchProductsCategory() {
+    let result = await fetch(
+      environment.api_base_url + 'categorys/' + this.app_info.navbar_title.id
+    );
+    let data = await result.json();
+    this.app_info.categorys = data;
+  }
 }

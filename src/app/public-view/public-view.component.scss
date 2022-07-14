@@ -1,9 +1,17 @@
-.navbar__list__item{
-    background: transparent !important;
-    border: none !important;
-}
+
 
 .navbar__link__title{
     text-decoration: none;
     
+}
+
+.products__popover__home{
+
+    top: 12px;
+    left: -10px;
+    .products__popover__template{
+        width: 300px;
+    }
+    
+
 }

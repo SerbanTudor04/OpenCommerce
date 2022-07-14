@@ -1,5 +1,16 @@
 # OpenCommerce Change Log
 
+## 0.2.3
+### Updates:
+- [x] Add search bar with no functionaly yet.
+- [x] Redefine store controller
+- [x] Redefine store model
+- [x] Add get categorys functionaly
+- [x] Implement first steps for products and categories functionality
+- [x] Remove Products Header Categorys model and controller
+- [x] Rename ocom_store controller to store
+- [x] Add in public view products dropdown for desktop to see categories
+### Fixes:
 ## 0.2.2
 ### Updates:
 - [x] Add 404 page
