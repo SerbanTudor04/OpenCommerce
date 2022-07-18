@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_14_121437) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_18_114152) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_121437) do
   end
 
   create_table "ocom_products_carts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "cart_id"
+    t.string "session_id"
     t.string "product_id"
     t.float "quantity"
     t.float "price"

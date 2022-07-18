@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
-    def getProductsByStore
-        @products = Product.where(:store_id=>params[:store_id])
+    def getProductsByCategory
+        @products = Product.where(:category_id=>params[:category_id])
         render json: @products
     end
 
@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
     private
 
     def product_params
-        params.require(:product).permit(:name, :description, :price, :store_id, :image)
+        params.require(:product).permit(:name, :description, :price, :category_id, :image)
     end
 
     def set_product
