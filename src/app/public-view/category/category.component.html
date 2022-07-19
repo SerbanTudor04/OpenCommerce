@@ -1,0 +1,37 @@
+<ion-content>
+    <div class="ocom__products__container">
+        <ion-toolbar color="default" class="ocom__products__toolbar">
+            <ion-buttons slot="primary">
+                
+                <ion-item   color="default">
+                    <!-- <ion-label>Sort by:</ion-label> -->
+                    <ion-select placeholder="Sort by:"  (ionChange)="handleSortChange($event)" interface="popover">
+                        <ion-select-option value="name">Name</ion-select-option>
+                        <ion-select-option value="price">Price</ion-select-option>
+                        <ion-select-option value="date">Date</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item style="padding-left: 1rem; width: fit-content;" color="default">
+                    <!-- number of items per row -->
+                    <!-- <ion-label>Items per row:</ion-label> -->
+                    <ion-select  placeholder="Items per row" class="ocom__products__selectList__noBorder"  value="3"  (ionChange)="handleItemsPerRowChange($event)" interface="popover">
+                        <ion-select-option value="3">3</ion-select-option>
+                        <ion-select-option value="5">5</ion-select-option>
+                        <ion-select-option value="10">10</ion-select-option>
+                    </ion-select>
+                </ion-item>
+
+            </ion-buttons>
+            <ion-title slot="start">{{category_name}}</ion-title>
+        </ion-toolbar>
+        
+        <ion-grid class="ocom__products__lists">
+             <ion-row *ngFor="let row of products">
+                 <ion-col *ngFor="let col of row">
+                     <app-product [product]="col"></app-product>
+                 </ion-col>
+             </ion-row>
+        </ion-grid>
+    </div>
+
+</ion-content>

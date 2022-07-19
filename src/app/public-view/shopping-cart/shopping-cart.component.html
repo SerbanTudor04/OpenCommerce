@@ -1,0 +1,31 @@
+
+<ion-button id="show__shoppingcart">
+    <ion-icon slot="icon-only" name="cart"></ion-icon>
+    <ion-badge color="defaut" *ngIf="shopCartS.current_cart.length>0">
+        {{ shopCartS.current_cart.length }}
+    </ion-badge>
+
+</ion-button>
+<ion-popover   class="products__popover__home" trigger="show__shoppingcart" showBackdrop="false" side="bottom" alignment="start">
+    <ng-template class="products__popover__template">
+        <ion-list  lines="none" *ngIf="shopCartS.current_cart.length>0">
+            <ion-button expand="full" color="primary" shape="round">Checkout</ion-button>
+                <br>
+            <ion-item color="default"  button [href]="'/cart'" *ngFor="let cart of shopCartS.current_cart">
+                <ion-thumbnail >
+                    <img [src]="cart.image">
+                </ion-thumbnail>
+                <ion-label>{{cart.name}}</ion-label>
+            </ion-item>
+            <hr>
+            <ion-button expand="block" color="primary" fill="none" shape="round">View and modify cart</ion-button>
+
+        </ion-list>
+        <ion-list color="default" lines="none" *ngIf="shopCartS.current_cart.length==0">
+            <ion-item  button [href]="'/cart'">
+                <ion-label>Your cart is empty</ion-label>
+            </ion-item>
+        </ion-list>
+
+    </ng-template>
+  </ion-popover>

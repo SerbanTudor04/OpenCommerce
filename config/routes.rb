@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   get 'stores/default', to: 'stores#getDefaultStore', as: :ocom_store_default
  
-  get 'categorys/:store_id', to: 'categories#getCategoriesByStore', as: :ocom_categories_by_store_id
+  get 'categories/:store_id', to: 'categories#getCategoriesByStore', as: :ocom_categories_by_store_id
+  get 'categories/category/:category_id', to: 'categories#getCategoryById', as: :ocom_category_by_id
   get 'products/:category_id', to: 'products#getProductsByCategory', as: :ocom_products_by_category_id
 
 end

@@ -1,0 +1,16 @@
+.ocom__products__container{
+    width: 100%;
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    @media screen and (min-width: 768px){
+        width: 50%;
+        
+        transform: translateX(50%);
+    }
+    
+}
+.ocom__products__selectList__noBorder{
+    border: none;
+    box-shadow: none;
+}

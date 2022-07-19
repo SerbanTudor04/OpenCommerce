@@ -1,0 +1,16 @@
+<ion-card class="ocom__product__card">
+    <ion-card-header>
+        <ion-card-title>
+        <a  href="/product/{{product.id}}">
+            
+            <ion-img [src]="product.image"></ion-img>
+            
+        </a>
+
+        </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <a  class="ocom__product__title" href="/product/{{product.id}}">{{product.name}}</a>
+        <ion-button (click)="handleAddButtonClick()" expand="block" color="primary" shape="round">Add to cart</ion-button>
+    </ion-card-content>
+</ion-card>

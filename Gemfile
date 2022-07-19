@@ -77,3 +77,4 @@ gem 'foreman'
 
 gem "securerandom"
 gem "rack-cors"
+gem 'sassc-rails'

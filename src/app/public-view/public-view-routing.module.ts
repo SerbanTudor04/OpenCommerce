@@ -6,6 +6,7 @@ import { PublicViewComponent } from './public-view.component';
 const routes: Routes = [{ path: '', component: PublicViewComponent,children:[
   { path: 'home', component: HomeComponent },
   { path: '404', component: Error404Component },
+  { path: 'category',loadChildren: ()=>import('./category/category.module').then(m=>m.CategoryModule) },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ] }];
 

@@ -31,7 +31,7 @@ export class PublicViewComponent implements OnInit {
 
   async fetchProductsCategory() {
     let result = await fetch(
-      environment.api_base_url + 'categorys/' + this.app_info.navbar_title.id
+      environment.api_base_url + 'categories/' + this.app_info.navbar_title.id
     );
     let data = await result.json();
     this.app_info.categorys = data;
