@@ -1,5 +1,15 @@
 # OpenCommerce Change Log
 
+## 0.3.0
+### Updates:
+- [x] Add see products by category feature
+- [x] Add functionality filter by price,name and date
+- [x] Add functionality see a number of products per row
+- [x] Add shoppingCart service with add to cart and remove from cart functionality, also keep session with cart
+- [x] Add shopping cart component and addit to app main toolbar
+- [x] Add functionality to get information of a category by id
+### Fixes:
+- [x] Fix typo in categories api route
 ## 0.2.3
 ### Updates:
 - [x] Add search bar with no functionaly yet.
