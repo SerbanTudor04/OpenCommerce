@@ -6,19 +6,27 @@
     </ion-badge>
 
 </ion-button>
-<ion-popover   class="products__popover__home" trigger="show__shoppingcart" showBackdrop="false" side="bottom" alignment="start">
+<ion-popover    class="products__popover__home" trigger="show__shoppingcart" showBackdrop="false" side="bottom" alignment="start">
     <ng-template class="products__popover__template">
         <ion-list  lines="none" *ngIf="shopCartS.current_cart.length>0">
-            <ion-button expand="full" color="primary" shape="round">Checkout</ion-button>
+            <ion-button style="width: 90%;padding-left: 1rem;" fill="outline"  expand="block" color="primary" shape="round">Checkout</ion-button>
                 <br>
-            <ion-item color="default"  button [href]="'/cart'" *ngFor="let cart of shopCartS.current_cart">
-                <ion-thumbnail >
-                    <img [src]="cart.image">
+            <ion-item   *ngFor="let cart of shopCartS.current_cart">
+                <ion-thumbnail>
+                    <a  href="/product/{{cart.id}}"><img [src]="cart.image"></a>
                 </ion-thumbnail>
-                <ion-label>{{cart.name}}</ion-label>
+                <a class="no__decoration__link" href="/product/{{cart.id}}">
+                    <ion-label  style="padding-left: 1rem;">
+                        {{cart.name}}<br>
+                        <small><ion-text>Quantity: {{cart.quantity ?? "1"}}</ion-text></small>
+                    </ion-label>
+                </a>
+                <ion-button (click)="removeFromCart(cart)" fill="clear" shape="round" color="danger">
+                    <ion-icon slot="icon-only" name="close"></ion-icon>
+                </ion-button>
             </ion-item>
             <hr>
-            <ion-button expand="block" color="primary" fill="none" shape="round">View and modify cart</ion-button>
+            <ion-button style="width: 90%;padding-left: 1rem;"  color="default" fill="clear" shape="round">View and modify cart</ion-button>
 
         </ion-list>
         <ion-list color="default" lines="none" *ngIf="shopCartS.current_cart.length==0">

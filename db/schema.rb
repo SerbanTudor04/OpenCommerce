@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_18_114152) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_20_124518) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -48,6 +48,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_18_114152) do
   create_table "ocom_products_images", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "image_url"
     t.string "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ocom_sessions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "session_id", null: false
+    t.uuid "user_id", null: false
+    t.string "user_name", null: false
+    t.string "user_type", null: false
+    t.datetime "expire_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

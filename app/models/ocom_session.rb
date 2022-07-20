@@ -1,0 +1,2 @@
+class OcomSession < ApplicationRecord
+end

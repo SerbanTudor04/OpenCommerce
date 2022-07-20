@@ -1,5 +1,15 @@
 # OpenCommerce Change Log
-
+## 0.3.1
+### Updates:
+- [x] Add option to remove items from cart
+- [x] Add quantity to cart showcase
+- [ ] Add price to cart showcase
+- [ ] Add option to change quantity in cart
+- [x] Add sessions model to store cart data
+- [ ] Add session controller
+### Fixes:
+- [x] Fixed title of the frontend
+- [x] Fixed shopping cart item link and buttons in the frontend
 ## 0.3.0
 ### Updates:
 - [x] Add see products by category feature
@@ -72,3 +82,7 @@ New Features:
     -  Deploy first instance of the application
     -  Add support postgresql database
     -  Define admin user model
+
+### Information:
+Items with [x] are implemented.
+Items with [ ] are not work in progress.
