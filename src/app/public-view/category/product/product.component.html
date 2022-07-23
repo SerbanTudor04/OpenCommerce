@@ -10,7 +10,8 @@
         </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-        <a  class="ocom__product__title" href="/product/{{product.id}}">{{product.name}}</a>
+        <a  class="ocom__product__title" href="/product/{{product.id}}">{{product.name}}</a><br>
+        <ion-text>{{product.price}} {{product.curreny ?? "$"}}</ion-text>
         <ion-button (click)="handleAddButtonClick()" expand="block" color="primary" shape="round">Add to cart</ion-button>
     </ion-card-content>
 </ion-card>

@@ -1,4 +1,11 @@
 # OpenCommerce Change Log
+
+## 0.3.2
+### Updates:
+- [x] Add currenty and address columns to stores table
+- [x] Add currenty at product component in category page
+### Fixes:
+
 ## 0.3.1
 ### Updates:
 - [x] Add option to remove items from cart
