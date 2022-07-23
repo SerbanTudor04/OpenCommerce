@@ -1,5 +1,8 @@
 # OpenCommerce Change Log
-
+## 0.3.3
+### Updates:
+### Fixes:
+- [x] Fixed when adding a new product to the cart, the product was multiplied in cart, but not adding more quantity.
 ## 0.3.2
 ### Updates:
 - [x] Add currenty and address columns to stores table
