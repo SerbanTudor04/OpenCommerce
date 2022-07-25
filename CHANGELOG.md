@@ -1,4 +1,11 @@
 # OpenCommerce Change Log
+## 0.3.5
+### Updates:
+- [x] Add models for carousel and carousel banners
+- [x] Add default style for content on pages
+- [x] Implement it on all pages
+### Fixes:
+
 ## 0.3.4
 ### Updates:
 - [x] Add price in cart showcase.

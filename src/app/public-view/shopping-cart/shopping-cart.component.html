@@ -1,8 +1,11 @@
 
 <ion-button id="show__shoppingcart">
     <ion-icon slot="icon-only" name="cart"></ion-icon>
-    <ion-badge color="defaut" *ngIf="shopCartS.current_cart.length>0">
+    <ion-badge  color="default" *ngIf="shopCartS.current_cart.length>0">
+        <ion-text color="danger">
         {{ shopCartS.current_cart.length }}
+
+        </ion-text>
     </ion-badge>
 
 </ion-button>

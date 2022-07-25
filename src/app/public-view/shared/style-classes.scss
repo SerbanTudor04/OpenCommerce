@@ -1,0 +1,13 @@
+.ocom__content_container{
+    width: 100%;
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    @media screen and (min-width: 768px){
+        width: 50%;
+        
+        transform: translateX(50%);
+    }
+    
+}
+

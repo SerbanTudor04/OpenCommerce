@@ -1,0 +1,2 @@
+class OcomCarouselsBanner < ApplicationRecord
+end

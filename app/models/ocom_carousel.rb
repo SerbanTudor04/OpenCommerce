@@ -1,0 +1,2 @@
+class OcomCarousel < ApplicationRecord
+end
