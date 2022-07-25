@@ -18,9 +18,19 @@
                 <a class="no__decoration__link" href="/product/{{cart.id}}">
                     <ion-label  style="padding-left: 1rem;">
                         {{cart.name}}<br>
-                        <small><ion-text>Quantity: {{cart.quantity ?? "1"}}</ion-text></small>
+                        <small>
+                            <ion-text color="secondary">
+                                Quantity {{cart.quantity ?? '1'}}
+                            </ion-text>
+                            
+                            <ion-label color="secondary">
+                                {{cart.price}} {{cart.currency ?? 'USD'}}
+                            </ion-label>
+                            
+                        </small>
                     </ion-label>
                 </a>
+                
                 <ion-button (click)="removeFromCart(cart)" fill="clear" shape="round" color="danger">
                     <ion-icon slot="icon-only" name="close"></ion-icon>
                 </ion-button>

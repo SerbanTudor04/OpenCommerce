@@ -1,4 +1,9 @@
 # OpenCommerce Change Log
+## 0.3.4
+### Updates:
+- [x] Add price in cart showcase.
+### Fixes:
+
 ## 0.3.3
 ### Updates:
 ### Fixes:

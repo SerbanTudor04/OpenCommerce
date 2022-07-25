@@ -48,6 +48,16 @@ export class ShoppingCartService {
     localStorage.setItem('ocom__cart',JSON.stringify(parse_cart));
     this.current_cart = parse_cart;
   }
+
+  changeQuantity(product:any, quantity:number){
+    const cart = localStorage.getItem('ocom__cart')??'[]';
+    let parse_cart=Array.from(JSON.parse(cart));
+    var product_in_cart:any=parse_cart.find((p:any)=>p.id==product.id);
+    product_in_cart.quantity=quantity;
+    parse_cart[parse_cart.indexOf(product_in_cart)]=product_in_cart;
+    this.current_cart = parse_cart;
+    localStorage.setItem('ocom__cart',JSON.stringify(parse_cart));
+  }
   
 
 }

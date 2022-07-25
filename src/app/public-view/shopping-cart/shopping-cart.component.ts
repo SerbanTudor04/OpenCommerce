@@ -16,4 +16,5 @@ export class ShoppingCartComponent implements OnInit {
   removeFromCart(product:any){
     this.shopCartS.removeFromCart(product);
   }
+
 }
